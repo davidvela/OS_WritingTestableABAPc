@@ -72,10 +72,10 @@ CLASS ltc_to_arabic IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD error_cases.
-    assert_error( i_roman = 'A' ).     "-- invalid character
-    assert_error( i_roman = 'ABC' ).   "-- invalid characters
-    assert_error( i_roman = 'IIII').   "-- more than 3
+    assert_error( i_roman = 'A' ).        "-- invalid character
+    assert_error( i_roman = 'ABC' ).      "-- invalid characters
+    assert_error( i_roman = 'IIII').      "-- more than 3
     assert_error( i_roman = 'MCXXXXI').   "-- more than 3 inside
-    assert_error( i_roman = 'MIC').    "-- I only before X and V
+    assert_error( i_roman = 'MIC').       "-- I only before X and V
   ENDMETHOD.
 ENDCLASS.
