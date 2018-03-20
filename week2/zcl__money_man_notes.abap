@@ -1,4 +1,4 @@
-*> Using TDD - Test Development ... 
+*> Using TDD - Test Driven Development ... 
 *> -- to implement a new feautre: get_amount_in_notes
 *           Steps: rename class, 
 CLASS ltc_get_amount DEFINITION FOR TESTING
@@ -29,5 +29,5 @@ CLASS ltc_get_amount IMPLEMENTATION.
     ENDMETHOD.
 
 
-    
+
 ENDCLASS. 
