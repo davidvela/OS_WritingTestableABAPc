@@ -5,4 +5,4 @@ Software
 * money_machine 
 
 ## Exercise 2
-![Pic1](https://github.com/davidvela/OS_WritingTestableABAPc/blob/master/week1/exercise2.JPG)
+![Pic1](https://github.com/davidvela/OS_WritingTestableABAPc/blob/master/week2/exercise2.JPG)
