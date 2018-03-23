@@ -42,7 +42,7 @@ CLASS ltc_get_amount_in_coins2 DEFINITION FOR TESTING
 ENDCLASS. 
 
 CLASS ltc_get_amount_in_coins IMPLEMENTATION. 
-    METHOD amount1_coin1. 
+    METHOD setup. 
         m_cut = NEW cl_money_machine( ). 
     ENDMETHOD. 
     METHOD amount1_coin1. 
