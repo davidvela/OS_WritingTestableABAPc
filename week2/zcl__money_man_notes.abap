@@ -95,51 +95,73 @@ CLASS ltc_get_amount IMPLEMENTATION.
                                                 ( amount = 5   type = 'note' ) ) ).
     ENDMETHOD.
     " 8 
-    METHOD get_change_for_amount_5.
+    METHOD get_change_for_amount_8.
         cl_abap_unit_assert=>assert_equals( act = m_cut->get_change( 1 )
-                                        exp = VALUE zcl_wtcr_money_machine=>tt_change(
-                                                ( amount = 5   type = 'note' ) ) ).
+            exp = VALUE zcl_wtcr_money_machine=>tt_change(
+               ( amount = 5   type = 'note' ) ( amount = 2   type = 'coin' )  ( amount = 1   type = 'coin' )  ) ).
     ENDMETHOD.
      " 10 
-    METHOD get_change_for_amount_5.
+    METHOD get_change_for_amount_10.
         cl_abap_unit_assert=>assert_equals( act = m_cut->get_change( 1 )
                                         exp = VALUE zcl_wtcr_money_machine=>tt_change(
-                                                ( amount = 5   type = 'note' ) ) ).
+                                                ( amount = 10   type = 'note' ) ) ).
     ENDMETHOD.
     " 15 
-    METHOD get_change_for_amount_5.
+    METHOD get_change_for_amount_15.
         cl_abap_unit_assert=>assert_equals( act = m_cut->get_change( 1 )
                                         exp = VALUE zcl_wtcr_money_machine=>tt_change(
-                                                ( amount = 5   type = 'note' ) ) ).
+                                                ( amount = 10   type = 'note' ) ( amount = 5   type = 'note' ) ) ).
     ENDMETHOD.
     " 20 
-    METHOD get_change_for_amount_5.
+    METHOD get_change_for_amount_20.
         cl_abap_unit_assert=>assert_equals( act = m_cut->get_change( 1 )
                                         exp = VALUE zcl_wtcr_money_machine=>tt_change(
-                                                ( amount = 5   type = 'note' ) ) ).
+                                                ( amount = 20   type = 'note' ) ) ).
     ENDMETHOD.
-        " 5 
-    METHOD get_change_for_amount_5.
+    " 50 
+    METHOD get_change_for_amount_50.
         cl_abap_unit_assert=>assert_equals( act = m_cut->get_change( 1 )
                                         exp = VALUE zcl_wtcr_money_machine=>tt_change(
-                                                ( amount = 5   type = 'note' ) ) ).
+                                                ( amount = 50   type = 'note' ) ) ).
     ENDMETHOD.
-        " 5 
-    METHOD get_change_for_amount_5.
-        cl_abap_unit_assert=>assert_equals( act = m_cut->get_change( 1 )
+    " 85 
+    METHOD get_change_for_amount_85.
+        cl_abap_unit_assert=>assert_equals( act = m_cut->get_change( 85 )
                                         exp = VALUE zcl_wtcr_money_machine=>tt_change(
-                                                ( amount = 5   type = 'note' ) ) ).
+                                                ( amount = 50  type = 'note' )
+                                                ( amount = 20  type = 'note' )
+                                                ( amount = 10  type = 'note' )
+                                                ( amount =  5  type = 'note' ) ) ).
     ENDMETHOD.
-        " 5 
-    METHOD get_change_for_amount_5.
+    " 100 
+    METHOD get_change_for_amount_100.
         cl_abap_unit_assert=>assert_equals( act = m_cut->get_change( 1 )
                                         exp = VALUE zcl_wtcr_money_machine=>tt_change(
-                                                ( amount = 5   type = 'note' ) ) ).
+                                                ( amount = 100   type = 'note' ) ) ).
     ENDMETHOD.
-        " 5 
-    METHOD get_change_for_amount_5.
+    " 200 
+    METHOD get_change_for_amount_200.
         cl_abap_unit_assert=>assert_equals( act = m_cut->get_change( 1 )
                                         exp = VALUE zcl_wtcr_money_machine=>tt_change(
-                                                ( amount = 5   type = 'note' ) ) ).
+                                                ( amount = 200   type = 'note' ) ) ).
+    ENDMETHOD.
+    " 500 
+    METHOD get_change_for_amount_500.
+        cl_abap_unit_assert=>assert_equals( act = m_cut->get_change( 1 )
+                                        exp = VALUE zcl_wtcr_money_machine=>tt_change(
+                                                ( amount = 500   type = 'note' ) ) ).
+    ENDMETHOD.
+    " 688 
+    METHOD get_change_for_amount_688.
+        cl_abap_unit_assert=>assert_equals( act = m_cut->get_change( 688 )
+                                        exp = VALUE zcl_wtcr_money_machine=>tt_change(
+                                                ( amount = 500 type = 'note' )
+                                                ( amount = 100 type = 'note' )
+                                                ( amount = 50  type = 'note' )
+                                                ( amount = 20  type = 'note' )
+                                                ( amount = 10  type = 'note' )
+                                                ( amount = 5   type = 'note' )
+                                                ( amount = 2   type = 'coin' )
+                                                ( amount = 1   type = 'coin' ) ) ).
     ENDMETHOD.
 ENDCLASS. 
