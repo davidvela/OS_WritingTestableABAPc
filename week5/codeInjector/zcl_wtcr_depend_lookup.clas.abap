@@ -19,7 +19,6 @@ ENDCLASS.
 
 CLASS ZCL_WTCR_DEPEND_LOOKUP IMPLEMENTATION.
 
-
   METHOD get_amount_in_coins.
     DATA(notes) = zcl_wtcr_factory=>cash_provider( )->get_notes( i_currency = 'EUR' ). "dependency lookup
     SORT notes BY amount ASCENDING.
@@ -31,6 +30,10 @@ CLASS ZCL_WTCR_DEPEND_LOOKUP IMPLEMENTATION.
 
 
   METHOD get_amount_in_notes.
-    r_value = i_amount - get_amount_in_coins( i_amount ).
+    r_value = get_amount_in_coins( i_amount ).
+    IF r_value >= 0.
+      r_value = i_amount - r_value.
+    ENDIF.
   ENDMETHOD.
+
 ENDCLASS.
