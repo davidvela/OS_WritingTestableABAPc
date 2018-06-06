@@ -12,4 +12,3 @@ Open SAP - writing testable code
 
 
 notes ... 
-Adjust helloworld example! 
